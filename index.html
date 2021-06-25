@@ -16,118 +16,138 @@
 </head>
 
 <body>   
-    
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <img src="./assets/images/favicon.png" alt="logo" id="topFavicon"> 
-                <a class="brand-logo">US Voter Representatives Lookup Tool</a>
+        <div class="row">
+            <div class="col s12 m12 l12" style="background-color: #223E88;">
+                
+                <h3 style="color: white; padding-bottom: 10px;"><img style="width: 3%; margin-right: 5px;" src="./assets/images/icon-100.png">US Voter Representatives Lookup Tool</h3>
             </div>
-        </nav>
-
-        <!-- Choose District Search -->
-        <section>
-            <h5>Choose District</h5>
-            <form id="repSearchForm">
-                <select class="browser-default" id="stateSelect">
-                    <option value="" disabled selected>State</option>
-                    <!-- State search options will load here -->
-                </select>
-                <select class="browser-default" id="districtSelect">
-                    <option value="" disabled selected>Number</option>
-                    <!-- District number search options will load here -->
-                </select>
-                <button type="submit" class="btn">Search</button>
-                <h6 id="noDistrict" class="hidden">That district does not exist.<br>Please try lowering the number for that state.</h6>
-                <h6 id="loadingText" class="hidden">LOADING DATA...</h6>
-            </form>
-            <div id="previousSearch">
-                <h6>Previous Search: AL 01</h6>
+        </div>
+        <div class="row">
+            <!-- Intro Blurb -->
+            <div class="col s12 m6 l6" style="color: white">
+                <ul>
+                    <li>Are you interested in voting but unsure where to start?</li>
+                    <li>Feeling overwhelmed or pressured?</li>
+                </ul>
             </div>
-        </section>                    
 
-        <!-- Find Your District Search -->
-        <section class="sectionDistrict">
-            <h5>Find Your District</h5>
-            <ul >
-                <li>Not sure who your US Representative is?</li>
-                <li>Enter your street address and zip code below to find them.</li>
-            </ul>
-            <form id="usrAddressForm">
-                <div class="row" id="addressSearchBar">
-                    <div class="input-field addr-field">
-                        <input  id="street_address" type="text" class="validate">
-                        <label style="color:white" for="street_address">Street Address</label>
-                    </div>
-                    <div class="input-field addr-field">
-                        <input id="zip" type="text" class="validate">
-                        <label style="color:white" for="zip">Zip Code</label>
-                    </div>
-                    <input class="btn" type="submit" value="Find My District">
-                    <span id="districtOutput" style="font-size: 48px; font-weight:bold"></span>
-                </div>
-            </form>        
-        </section>
-
-        <!-- Intro Blurb -->
-        <section>
-            <ul class="listOne">
-                <li>Are you interested in voting but unsure where to start?</li>
-                <li>Feeling overwhelmed or pressured?</li>
-            </ul>
-            <ul class="listTwo">
+            <div class="col s12 m6 l6" style="color: white">
+            <ul>
                 <li>Well, we're here to help.</li>
                 <li>Use the search above to review candidate information.</li>
             </ul>
-        </section>
-    </header>
-
-    <main id="grid">
-        <div class="row">
-
-            <!-- Info Card -->
-            <div class="card col s4" id="info-card" class="collapsible">
-                <div class="card-content">
-                    <img src="./assets/images/education_icon_142625.png" alt="info" width="100" height="100">
-                    <p>Information Card</p>
-                </div>
-                <div class="table">
-                    <div class="info-photo" id="repPhoto">
-                        <!-- Photo appended here -->
-                    </div>
-                    <div class="expend-table" id=infoCardDataContainer class="collapsible">
-                        <!-- Info appended here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Finance Card -->
-            <div class="card col s4" id="finance-card">
-                <div class="card-content">
-                    <img src="./assets/images/flatten_the_curve_icon_142602.png" alt="info" width="100" height="100">
-                    <p>Finance Card</p>
-                </div>
-                <div class="expend-table" id="financeDataContainer">
-                    <!-- Finance data appended here -->
-                </div>
-            </div>
-            
-            <!-- Supporters Card -->
-            <div class="card col s4" id="supporters-card">
-                <div class="card-content">
-                    <img src="./assets/images/thumbs_up_icon_142634.png" alt="info" width="100" height="100">
-                    <p>Supporters Card</p>
-                </div>
-                <!-- Supporters data appended here -->
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="background-color: #0168AD">
+            <!-- Choose District Search -->
+            <div style="col s12 m6 l6">
+            <section>
+                <h5>Choose District</h5>
+                <form id="repSearchForm">
+                    <select class="browser-default" id="stateSelect">
+                        <option value="" disabled selected>State</option>
+                        <!-- State search options will load here -->
+                    </select>
+                    <select class="browser-default" id="districtSelect">
+                        <option value="" disabled selected>Number</option>
+                        <!-- District number search options will load here -->
+                    </select>
+                    <button type="submit" class="btn">Search</button>
+                    <h6 id="noDistrict" class="hidden">That district does not exist.<br>Please try lowering the number for that state.</h6>
+                    <h6 id="loadingText" class="hidden">LOADING DATA...</h6>
+                </form>
+                <div id="previousSearch">
+                    <h6>Previous Search: AL 01</h6>
+                </div>
+            </section>                    
+            </div>
 
+            <!-- Find Your District Search -->
+            <div style="col s12 m6 l6">
+            <section class="sectionDistrict">
+                <h5>Find Your District</h5>
+                <ul >
+                    <li>Not sure who your US Representative is?</li>
+                    <li>Enter your street address and zip code below to find them.</li>
+                </ul>
+                <form id="usrAddressForm">
+                    <div class="row" id="addressSearchBar">
+                        <div class="input-field addr-field">
+                            <input  id="street_address" type="text" class="validate">
+                            <label style="color:white" for="street_address">Street Address</label>
+                        </div>
+                        <div class="input-field addr-field">
+                            <input id="zip" type="text" class="validate">
+                            <label style="color:white" for="zip">Zip Code</label>
+                        </div>
+                        <input class="btn" type="submit" value="Find My District">
+                        <span id="districtOutput" style="font-size: 48px; font-weight:bold"></span>
+                    </div>
+                </form>        
+            </section>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <div class="row">
+        <!-- Info Card -->
+        <div class="card col s12 m6 l6" id="info-card" class="collapsible">
+            <div class="card-content">
+                <img class="responsive-img" src="./assets/images/education_icon_142625.png" alt="info" width="100" height="100">
+                <p>Information Card</p>
+            </div>
+            <div class="table">
+                <div class="info-photo" id="repPhoto">
+                    <!-- Photo appended here -->
+                </div>
+                <div class="expend-table" id=infoCardDataContainer class="collapsible">
+                    <!-- Info appended here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Finance Card -->
+        <div class="card col s12 m6 l6" id="finance-card">
+            <div class="card-content">
+                <img class="responsive-img" src="./assets/images/flatten_the_curve_icon_142602.png" alt="info" width="100" height="100">
+                <p>Finance Card</p>
+            </div>
+            <div class="expend-table" id="financeDataContainer">
+                <!-- Finance data appended here -->
+            </div>
+        </div>
+    </div>
+    <!-- end first row here  -->
+        
+    <div class="row">
+        <!-- Supporters Card -->
+        <div class="card col s12 m6 l6" id="supporters-card">
+            <div class="card-content">
+                <img class="responsive-img" src="./assets/images/thumbs_up_icon_142634.png" alt="info" width="100" height="100">
+                <p>Supporters Card</p>
+            </div>
+            <!-- Supporters data appended here -->
+        </div>
+        <!-- Travel Card -->
+        <div class="card col s12 m6 l6"> 
+            <div class="card-content">
+                <img class="responsive-img" src="./assets/images/travel_icon_142598.png" alt="info" width="100" height="100">
+                <p>Travel Card</p>
+            </div>
+            <div id="travel-card">
+                <!-- Trip data appended here -->
+            </div>
+        </div> 
+    </div>
+
+    <div class="row">
             <!-- Vote History Card -->
-            <div class="card col s6" id="vote-history-card">
+            <div class="card col s12" id="vote-history-card">
                 <div class="card-content">
-                    <img src="./assets/images/dialogue_icon_142637.png" alt="info" width="100" height="100">
+                    <img class="responsive-img" src="./assets/images/dialogue_icon_142637.png" alt="info" width="100" height="100">
                     <p>Vote History Card</p> 
                 </div>
                 <div class="cardWrapper" > 
@@ -143,17 +163,6 @@
                     </div>
                 </div> 
             </div>
-
-            <!-- Travel Card -->
-            <div class="card col s6"> 
-                <div class="card-content">
-                    <img src="./assets/images/travel_icon_142598.png" alt="info" width="100" height="100">
-                    <p>Travel Card</p>
-                </div>
-                <div id="travel-card">
-                    <!-- Trip data appended here -->
-                </div>
-            </div> 
         </div>
     </main>
 
